@@ -4,13 +4,13 @@ import { HomeIcon, NotebookIcon } from "lucide-react";
 export const DATA = {
   name: "Vinayak Srivastava",
   initials: "VS",
-  url: "https://dillion.io",
+  url: "https://srivinayak.vercel.app",
   location: "Lucknow, UP",
   locationLink: "https://www.google.com/maps/place/lucknow",
   description:
-    "Student & Software Developer (work in progress). I love building things and helping people. Very active on LinkedIn.",
+    "Student & Software Developer. I love building things and helping people. Very active on LinkedIn.",
   summary:
-    "In the mid of 2023, I was admitted to the National Institute of Technology, Durgapur, an institution of national importance in India.  There, I delved deeply into the world of web development and artificial intelligence.  I also learned about data structures and algorithms, object-oriented programming, computer networks, operating systems, and other topics in computer science.  I was a semi-finalist in the Adobe India Hackathon, where I created and shipped an ML model for extracting content from PDFs based on user personas and needs.  In my spare time, I'm now researching about agentic AI and AI agents, deciding whether they're safe or not!",
+    "In the mid of 2023, I was admitted to the National Institute of Technology Durgapur, an institution of national importance in India.  There, I delved deeply into the world of web development and artificial intelligence.  I also learned about data structures and algorithms, object-oriented programming, computer networks, operating systems, and other topics in computer science.  I was a semi-finalist in the Adobe India Hackathon, where I created and shipped an ML model for extracting content from PDFs based on user personas and needs.  In my spare time, I'm now researching about agentic AI and AI agents, deciding whether they're safe or not!",
   avatarUrl: "/me.jpg",
   skills: [
     "React",
@@ -81,10 +81,10 @@ export const DATA = {
       href: "https://logicboots.com/",
       badges: [],
       location: "Remote",
-      title: "Web Developer Intern",
+      title: "Full-stack Developer",
       logoUrl: "/logic.jpg",
-      start: "July 2025",
-      end: "Present",
+      start: "August 2025",
+      end: "December 2025",
       description:
         "Developed web applications for various large-scale projects such as Coeur-AI, DinkarAI - integrating proprietary AI models into the websites. Also created an animated landing page for the main website of the company using modern frameworks like NextJS. Engineered and developed a full-stack GIS-based asset management portal for Indian Railways, integrating KML file parsing to visualize over 10,000+ signaling and cable assets on an interactive map. ",
     },
