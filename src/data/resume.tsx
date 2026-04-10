@@ -8,7 +8,7 @@ export const DATA = {
   location: "Lucknow, UP",
   locationLink: "https://www.google.com/maps/place/lucknow",
   description:
-    "Student & Software Developer. I love building things and helping people. Very active on LinkedIn.",
+    "Student & Software Developer. I love building things and helping people. Very active on Twitter.",
   summary:
     "In the mid of 2023, I was admitted to the National Institute of Technology Durgapur, an institution of national importance in India.  There, I delved deeply into the world of web development and artificial intelligence.  I also learned about data structures and algorithms, object-oriented programming, computer networks, operating systems, and other topics in computer science.  I was a semi-finalist in the Adobe India Hackathon, where I created and shipped an ML model for extracting content from PDFs based on user personas and needs.  In my spare time, I'm now researching about agentic AI and AI agents, deciding whether they're safe or not!",
   avatarUrl: "/me.jpg",
@@ -32,7 +32,7 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    // { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
     email: "vinayaksrivastava323@gmail.com",
@@ -42,6 +42,13 @@ export const DATA = {
         name: "GitHub",
         url: "https://github.com/lord-vinayak",
         icon: Icons.github,
+
+        navbar: true,
+      },
+      X: {
+        name: "X",
+        url: "https://x.com/lord_vinayak_",
+        icon: Icons.x,
 
         navbar: true,
       },
@@ -81,7 +88,7 @@ export const DATA = {
       href: "https://logicboots.com/",
       badges: [],
       location: "Remote",
-      title: "Full-stack Developer",
+      title: "Full stack Developer",
       logoUrl: "/logic.jpg",
       start: "August 2025",
       end: "December 2025",
@@ -121,6 +128,59 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "AdGenAI",
+      href: "",
+      dates: "March 2026",
+      active: true,
+      description:
+        "I built AdGenAI, which turns a product photo and a model image into a studio-quality lifestyle ad — in seconds. Powered by Google Gemini's multimodal AI, it does what used to take a photographer, a designer, and a retoucher. Built for small businesses.",
+      technologies: [
+        "React",
+        "Express",
+        "Gemini AI",
+        "PostgreSQL",
+        "Cloudinary",
+        "Typescript",
+        "TailwindCSS",
+        "Sentry",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/lord-vinayak/ugc.ai",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video:
+        "https://res.cloudinary.com/dipv0insz/video/upload/q_auto/f_auto/v1775803197/Screen_Recording_2026-04-08_161830_zjhkzs.mp4",
+    },
+    {
+      title: "Power Hour Gym",
+      href: "",
+      dates: "March 2026",
+      active: true,
+      description:
+        "I built a website for Power Hour Gym in Kolkata. Used Google's AI Studio 2.0 and some insane prompts!",
+      technologies: [
+        "Next.js",
+        "Google AI Studio",
+        "Typescript",
+        "TailwindCSS",
+        "21st.dev"
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/lord-vinayak/gym-frontend",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video:
+        "https://res.cloudinary.com/dipv0insz/video/upload/q_auto/f_auto/v1775805394/Screen_Recording_2026-04-10_124608_nrc6om.mp4",
+    },
+    {
       title: "Coeur-AI",
       href: "https://coeur-ai.vercel.app/",
       dates: "September 2025",
@@ -147,7 +207,8 @@ export const DATA = {
         },
       ],
       image: "",
-      video: "https://files.catbox.moe/150d9f.mp4",
+      video:
+        "https://res.cloudinary.com/dipv0insz/video/upload/q_auto/f_auto/v1775802362/Screen_Recording_2026-04-10_115514_rhlvgg.mp4",
     },
     {
       title: "LogicBoots",
@@ -171,33 +232,10 @@ export const DATA = {
         },
       ],
       image: "",
-      video: "https://files.catbox.moe/d068l2.mp4",
+      video:
+        "https://res.cloudinary.com/dipv0insz/video/upload/q_auto/f_auto/v1775802808/Screen_Recording_2026-04-10_120308_iikund.mp4",
     },
-    {
-      title: "Railways Asset Management",
-      href: "https://irrailways.vercel.app/",
-      dates: "July - August 2025",
-      active: true,
-      description:
-        "Developed a full stack web app for Indian Railways to manage their cables and signalling assets. It features a GIS map with real-time tracking of over 10000+ assets.",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "Google Cloud Services",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Magic UI",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://irrailways.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "https://files.catbox.moe/povoel.mp4",
-    },
+    
   ],
   hackathons: [
     {
