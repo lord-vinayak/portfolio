@@ -5,6 +5,7 @@ import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import { Highlighter } from "@/components/ui/highlighter";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
@@ -24,11 +25,17 @@ export default function Page() {
                 yOffset={8}
                 text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
               />
-              <BlurFadeText
-                className="max-w-[600px] md:text-xl"
-                delay={BLUR_FADE_DELAY}
-                text={DATA.description}
-              />
+              <BlurFade delay={BLUR_FADE_DELAY} className="max-w-[600px] md:text-xl">
+                Student &amp;{" "}
+                <Highlighter action="box" color="#c05419" delay={1085}>
+                  Software Developer
+                </Highlighter>
+                . I love building things and helping people. Very active on{" "}
+                <Highlighter action="highlight" color="#87CEFA" delay={1900}>
+                  Twitter
+                </Highlighter>
+                .
+              </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
               <Avatar className="size-28 border">
