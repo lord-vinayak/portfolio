@@ -112,7 +112,7 @@ export const DATA = {
     {
       school: "National Institute of Technology Durgapur",
       href: "https://www.nitdgp.ac.in/",
-      degree: "Bachelors of Technology",
+      degree: "Bachelor of Technology",
       logoUrl: "/nit.png",
       start: "2023",
       end: "2027",

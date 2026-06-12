@@ -10,6 +10,7 @@ import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import { MouseTrail } from "../components/mouse-trail";
+import { PretextWrapper } from "@/components/pretext-wrapper";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -59,9 +60,7 @@ export default function Page() {
           <h2 className="text-xl font-bold">About</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
-            {DATA.summary}
-          </Markdown>
+          <PretextWrapper text={DATA.summary} />
         </BlurFade>
       </section>
       <section id="work">
