@@ -32,15 +32,21 @@ const MAGNET_STRENGTH = 0.0016;
 const PULL_DISTANCE = 160; // how far below rest the cursor must pull to toggle
 const ANCHOR_Y = 10;
 
-/** Left margin of the centered `max-w-2xl px-6` content column. */
+/** Right edge of the centered `max-w-2xl px-6` content column. */
 function getContentLeft() {
   const COLUMN = 672; // max-w-2xl = 42rem
   const PADDING = 24; // px-6
-  return  (window.innerWidth - COLUMN) / 2 + COLUMN - PADDING;
+  const rightEdge = (window.innerWidth - COLUMN) / 2 + COLUMN - PADDING;
+  // clamp so the lamp stays on-screen on narrow/mobile viewports (where the
+  // column is wider than the screen); desktop is unaffected.
+  return Math.min(rightEdge, window.innerWidth - PADDING);
 }
 
 export function InteractiveLamp() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  // mobile-only touch target that tracks the bob; its `touch-action: none`
+  // lets a touch starting on the bob drag it instead of scrolling the page.
+  const padRef = useRef<HTMLDivElement>(null);
   const { setTheme, resolvedTheme } = useTheme();
   // keep latest theme in a ref so the physics loop doesn't need to re-bind
   const themeRef = useRef(resolvedTheme);
@@ -51,6 +57,7 @@ export function InteractiveLamp() {
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
+    const pad = padRef.current;
 
     const {
       Engine,
@@ -308,6 +315,9 @@ export function InteractiveLamp() {
       ctx.textBaseline = "middle";
       ctx.fillText(dark ? "☾" : "☀", x, y + 1);
 
+      // keep the mobile touch-pad centered on the bob (grab radius = 29px)
+      if (pad) pad.style.transform = `translate(${x - 29}px, ${y - 29}px)`;
+
       raf = requestAnimationFrame(draw);
     };
     draw();
@@ -332,10 +342,19 @@ export function InteractiveLamp() {
   }, []);
 
   return (
-    <canvas
-      ref={canvasRef}
-      aria-hidden
-      className="pointer-events-none fixed inset-0 z-40 hidden md:block"
-    />
+    <>
+      <canvas
+        ref={canvasRef}
+        aria-hidden
+        className="pointer-events-none fixed inset-0 z-40 block"
+      />
+      {/* mobile-only grab target: 58px (matches the 29px grab radius), no
+          visual, suppresses page scroll only while touching the bob */}
+      <div
+        ref={padRef}
+        aria-hidden
+        className="fixed left-0 top-0 z-50 h-[58px] w-[58px] touch-none md:hidden"
+      />
+    </>
   );
 }
