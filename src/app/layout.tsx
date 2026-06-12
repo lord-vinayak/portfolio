@@ -1,3 +1,4 @@
+import { LampToggleClient } from "@/components/lamp-toggle-client";
 import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -65,7 +66,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
             <WelcomeLoader />
-            
+            <LampToggleClient />
             {children}
             <Navbar />
           </TooltipProvider>
