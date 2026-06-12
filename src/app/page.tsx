@@ -9,12 +9,20 @@ import { Highlighter } from "@/components/ui/highlighter";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import { MouseTrail } from "../components/mouse-trail";
 
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
+      <MouseTrail
+              dotColor="hsl(var(--primary))"
+              dotSize={5}
+              spacing={10}
+              trailLength={20}
+              fadeDuration={500}
+            />
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 flex justify-between">

@@ -10,10 +10,16 @@
     "cssVariables": true,
     "prefix": ""
   },
+  "iconLibrary": "radix",
   "aliases": {
     "components": "@/components",
     "utils": "@/lib/utils",
     "ui": "@/components/ui",
     "hooks": "@/hooks"
+  },
+  "registries": {
+    "@bundui": {
+      "url": "https://bundui.io/api/registry/{name}.json"
+    }
   }
 }
