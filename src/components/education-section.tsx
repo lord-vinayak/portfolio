@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BlurFade from "@/components/magicui/blur-fade";
 import { ResumeCard } from "@/components/resume-card";
 import { EasterEggPlayer } from "@/components/easter-egg-player";
@@ -11,6 +11,15 @@ const NIT_SCHOOL = "National Institute of Technology Durgapur";
 
 export function EducationSection() {
   const [isPlayerOpen, setIsPlayerOpen] = useState(false);
+
+  useEffect(() => {
+    const link = document.createElement("link");
+    link.rel = "prefetch";
+    link.as = "audio";
+    link.href = "/audio/HHarry Styles - Sign of the Times.mp3";
+    document.head.appendChild(link);
+    return () => { document.head.removeChild(link); };
+  }, []);
 
   return (
     <>
