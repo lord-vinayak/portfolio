@@ -93,7 +93,7 @@ export function InteractiveLamp() {
         Bodies.circle(anchorX, ANCHOR_Y + (i + 1) * LINK_SPACING, LINK_RADIUS, {
           collisionFilter: noCollide,
           frictionAir: 0.02,
-        })
+        }),
       );
     }
 
@@ -106,7 +106,7 @@ export function InteractiveLamp() {
         density: 0.02, // heavier than the links
         frictionAir: 0.02, // air drag so the swing settles in ~3s, not forever
         restitution: 0.4,
-      }
+      },
     );
 
     const chain = [anchor, ...links, bob];
@@ -120,9 +120,9 @@ export function InteractiveLamp() {
           // near-rigid so the chain stays taut and swings on an arc toward the
           // cursor rather than stretching like a rubber band. The toggle keys
           // off the drag pointer, so it doesn't need a stretchy chain.
-          stiffness: 0.50,
+          stiffness: 0.5,
           damping: 0.08,
-        })
+        }),
       );
     }
 
@@ -147,7 +147,7 @@ export function InteractiveLamp() {
 
     const onPointerDown = (e: PointerEvent) => {
       const d = Vector.magnitude(
-        Vector.sub({ x: e.clientX, y: e.clientY }, bob.position)
+        Vector.sub({ x: e.clientX, y: e.clientY }, bob.position),
       );
       // only hijack the pointer if the grab starts on the bob, so links/buttons
       // elsewhere on the page keep working normally.
@@ -290,14 +290,7 @@ export function InteractiveLamp() {
       ctx.fill();
 
       // bob body
-      const body = ctx.createRadialGradient(
-        x - 4,
-        y - 4,
-        2,
-        x,
-        y,
-        BOB_RADIUS
-      );
+      const body = ctx.createRadialGradient(x - 4, y - 4, 2, x, y, BOB_RADIUS);
       body.addColorStop(0, dark ? "#fde68a" : "#fcd34d");
       body.addColorStop(1, dark ? "#f59e0b" : "#d97706");
       ctx.fillStyle = body;

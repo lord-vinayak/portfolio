@@ -100,7 +100,7 @@ export function PretextWrapper({ text }: { text: string }) {
       cx: number,
       cy: number,
       r: number,
-      on: boolean
+      on: boolean,
     ) => {
       const bandCenter = lineTop + LINE_HEIGHT / 2;
       const dy = Math.abs(cy - bandCenter);
@@ -113,9 +113,7 @@ export function PretextWrapper({ text }: { text: string }) {
       if (exL <= 0) return { x: exR, w: width - exR }; // obstacle on the left
       if (exR >= width) return { x: 0, w: exL }; // obstacle on the right
       // obstacle in the middle → use the wider gap
-      return exL >= width - exR
-        ? { x: 0, w: exL }
-        : { x: exR, w: width - exR };
+      return exL >= width - exR ? { x: 0, w: exL } : { x: exR, w: width - exR };
     };
 
     let raf = 0;
@@ -171,8 +169,7 @@ export function PretextWrapper({ text }: { text: string }) {
   return (
     <div
       ref={containerRef}
-      className="relative w-full font-sans text-sm text-muted-foreground"
-    >
+      className="relative w-full font-sans text-sm text-muted-foreground">
       <canvas ref={canvasRef} className="block" aria-hidden />
       {/* keep the real text in the DOM for SEO / a11y / copy-paste */}
       <span className="sr-only">{text}</span>

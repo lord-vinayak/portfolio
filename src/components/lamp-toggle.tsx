@@ -43,7 +43,7 @@ export function LampToggle() {
 
       {/* chain */}
       <motion.div
-        className='w-1 bg-gradient-to-b from-gray-400 to-gray-600 dark:from-gray-500 dark:to-gray-300 rounded-full relative'
+        className='w-1 bg-linear-to-b from-gray-400 to-gray-600 dark:from-gray-500 dark:to-gray-300 rounded-full relative'
         animate={{ height: chainLength + dragY }}
         transition={{
           duration: isDragging ? 0.05 : 0.6,
@@ -76,11 +76,11 @@ export function LampToggle() {
           y: dragY,
         }}
         transition={{ duration: 0.5, ease: 'easeInOut' }}
-        className='w-6 h-6 bg-gradient-to-br from-yellow-400 to-yellow-600 dark:from-yellow-300 dark:to-yellow-500 rounded-full shadow-lg border-2 border-yellow-500 dark:border-yellow-400 cursor-grab active:cursor-grabbing relative overflow-hidden pointer-events-auto select-none'
+        className='w-6 h-6 bg-linear-to-br from-yellow-400 to-yellow-600 dark:from-yellow-300 dark:to-yellow-500 rounded-full shadow-lg border-2 border-yellow-500 dark:border-yellow-400 cursor-grab active:cursor-grabbing relative overflow-hidden pointer-events-auto select-none'
         style={{ position: 'relative', top: -20 }}
         whileHover={{ scale: isDragging ? 1.12 : 1.08 }}
       >
-        <div className='w-full h-full rounded-full bg-gradient-to-br from-yellow-300 to-transparent opacity-60' />
+        <div className='w-full h-full rounded-full bg-linear-to-br from-yellow-300 to-transparent opacity-60' />
         <div className='absolute inset-0 flex items-center justify-center'>
           {isDarkMode ? (
             <MoonIcon className='w-3 h-3 text-gray-800' />

@@ -1,6 +1,12 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+/* Keep using the existing JS config (theme colors, dark mode, content globs,
+   and the tailwindcss-animate / typography plugins) under Tailwind v4. */
+@config "../../tailwind.config.ts";
+
+/* The split-flap TextFlippingBoard's 3D utilities (perspective-dramatic,
+   transform-3d, backface-hidden) are now provided natively by Tailwind v4 —
+   no polyfill needed. */
 
 @layer base {
     :root {
@@ -76,11 +82,11 @@
   }
 
   h3 code {
-    @apply !text-lg md:!text-xl;
+    @apply text-lg! md:text-xl!;
   }
-  
+
   pre {
-    @apply !px-0 rounded-lg overflow-x-auto py-4
+    @apply px-0! rounded-lg overflow-x-auto py-4
   }
    
   pre [data-line] {
@@ -88,7 +94,7 @@
   }
 
   code {
-    @apply text-sm md:text-base !leading-loose;
+    @apply text-sm md:text-base leading-loose!;
   }
   
   pre > code {
