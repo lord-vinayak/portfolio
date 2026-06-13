@@ -186,7 +186,7 @@ export default function Page() {
           </BlurFade>
         </div>
       </section> */}
-      <section id="contact" className="pb-20">
+      <section id="contact">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
             <div className="space-y-3">
@@ -215,6 +215,14 @@ export default function Page() {
             </div>
           </BlurFade>
         </div>
+      </section>
+      <section className="pb-20 -mt-6 flex justify-center">
+        <BlurFade delay={BLUR_FADE_DELAY * 17}>
+          <img
+            src="https://hitscounter.dev/api/hit?url=srivinayak.vercel.app&label=Visitors&icon=people&color=%23b02a37&message=&style=social&tz=Asia%2FKolkata"
+            alt="Visitor counter"
+          />
+        </BlurFade>
       </section>
     </main>
   );
