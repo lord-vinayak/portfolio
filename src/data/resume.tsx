@@ -79,6 +79,7 @@ export const DATA = {
     {
       company: "Skinovation Sciences",
       href: "https://www.skinovationsciences.com/",
+      screenshotUrl: "/screenshots/skinovation.png",
       badges: [],
       location: "Remote",
       title: "Technical Analyst Intern",
@@ -91,6 +92,7 @@ export const DATA = {
     {
       company: "SkillDzire",
       href: "https://learn.skilldzire.com/",
+      screenshotUrl: "/screenshots/skilldzire.png",
       badges: [],
       location: "Remote",
       title: "Software Developer Intern",
@@ -103,6 +105,7 @@ export const DATA = {
     {
       company: "EzyHelpers",
       href: "https://www.ezyhelpers.com/",
+      screenshotUrl: "/screenshots/ezyhelpers.png",
       badges: [],
       location: "Remote",
       title: "Software Engineer Intern",
@@ -115,6 +118,7 @@ export const DATA = {
     {
       company: "LogicBoots Private Limited",
       href: "https://logicboots.com/",
+      screenshotUrl: "/screenshots/logicboots.png",
       badges: [],
       location: "Remote",
       title: "Web Developer Intern",
@@ -128,6 +132,7 @@ export const DATA = {
       company: "Indian Institute of Technology Banaras Hindu University",
       badges: [],
       href: "https://www.iitbhu.ac.in/",
+      screenshotUrl: "/screenshots/iitbhu.jpg",
       location: "Varanasi, UP",
       title: "UG Research Intern",
       logoUrl: "/iitbhu.jpeg",
