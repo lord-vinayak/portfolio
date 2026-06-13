@@ -20,6 +20,7 @@ interface ResumeCardProps {
   period: string;
   description?: string;
   screenshotUrl?: string;
+  onEasterEggClick?: () => void;
 }
 export const ResumeCard = ({
   logoUrl,
@@ -31,10 +32,16 @@ export const ResumeCard = ({
   period,
   description,
   screenshotUrl,
+  onEasterEggClick,
 }: ResumeCardProps) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    if (onEasterEggClick) {
+      e.preventDefault();
+      onEasterEggClick();
+      return;
+    }
     if (description) {
       e.preventDefault();
       setIsExpanded(!isExpanded);

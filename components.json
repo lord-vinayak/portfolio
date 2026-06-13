@@ -21,6 +21,7 @@
     "@bundui": {
       "url": "https://bundui.io/api/registry/{name}.json"
     },
-    "@scrollxui": "https://www.scrollxui.dev/registry/{name}.json"
+    "@scrollxui": "https://www.scrollxui.dev/registry/{name}.json",
+    "@wigggle-ui": "https://wigggle-ui.vercel.app/r/{name}.json"
   }
 }
