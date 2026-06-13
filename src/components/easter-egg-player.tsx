@@ -103,7 +103,7 @@ function DiscoveryScreen() {
         <DiaTextReveal
           text={[
             "Great! You found my easter egg!",
-            "Here's the song dedicated to my college life!",
+            "Here's a song for you!",
           ]}
           repeat
           repeatDelay={0.5}
