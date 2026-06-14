@@ -19,12 +19,12 @@ export default function Page() {
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <MouseTrail
-              dotColor="hsl(var(--primary))"
-              dotSize={5}
-              spacing={10}
-              trailLength={20}
-              fadeDuration={500}
-            />
+        dotColor="hsl(var(--primary))"
+        dotSize={5}
+        spacing={10}
+        trailLength={20}
+        fadeDuration={500}
+      />
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 flex justify-between">
@@ -35,7 +35,9 @@ export default function Page() {
                 yOffset={8}
                 text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
               />
-              <BlurFade delay={BLUR_FADE_DELAY} className="max-w-[600px] md:text-xl">
+              <BlurFade
+                delay={BLUR_FADE_DELAY}
+                className="max-w-[600px] md:text-xl">
                 Student &amp;{" "}
                 <Highlighter action="box" color="#c05419" delay={1085}>
                   Software Developer
@@ -203,14 +205,14 @@ export default function Page() {
                   className="text-blue-500 hover:underline">
                   with a direct question on Twitter
                 </Link>{" "}
-                and I&apos;ll respond asap. 
-                If you&apos;re the email-and-calendar-invites type, feel free to drop me an{" "}
+                and I&apos;ll respond asap. If you&apos;re the
+                email-and-calendar-invites type, feel free to drop me an{" "}
                 <Link
                   href={DATA.contact.social.email.url}
                   className="text-blue-500 hover:underline">
                   email
                 </Link>{" "}
-                 instead.
+                instead.
               </p>
             </div>
           </BlurFade>
@@ -218,10 +220,20 @@ export default function Page() {
       </section>
       <section className="pb-20 -mt-6 flex justify-center">
         <BlurFade delay={BLUR_FADE_DELAY * 17}>
-          <img
-            src="https://hitscounter.dev/api/hit?url=srivinayak.vercel.app&label=Visitors&icon=people&color=%23b02a37&message=&style=social&tz=Asia%2FKolkata"
-            alt="Visitor counter"
-          />
+          <div className="flex flex-col items-center gap-2 text-center">
+            <p className="mx-auto max-w-[1200px] text-muted-foreground text-xs md:text-xs/relaxed lg:text-xs/relaxed xl:text-xs/relaxed">
+              Page template by{" "}
+              <Link
+                href="https://magicui.design/docs/templates/portfolio"
+                className="text-blue-500 hover:underline">
+                Dillion Verma's MagicUI
+              </Link>
+            </p>
+            <img
+              src="https://hitscounter.dev/api/hit?url=srivinayak.vercel.app&label=Visitors&icon=people&color=%23b02a37&message=&style=social&tz=Asia%2FKolkata"
+              alt="Visitor counter"
+            />
+          </div>
         </BlurFade>
       </section>
     </main>
