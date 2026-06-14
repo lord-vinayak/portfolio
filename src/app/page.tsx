@@ -226,7 +226,7 @@ export default function Page() {
               <Link
                 href="https://magicui.design/docs/templates/portfolio"
                 className="text-blue-500 hover:underline">
-                Dillion Verma's MagicUI
+                Dillion Verma&apos;s MagicUI
               </Link>
             </p>
             <img
